@@ -1,0 +1,13 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/cesanta-mdash-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  description: mDash API key sent as an HTTP bearer token.
+  sources:
+  - openapi/cesanta-mdash-openapi.yml
