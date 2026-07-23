@@ -1,0 +1,65 @@
+openapi: 3.0.3
+info:
+  title: Cesanta mDash REST Data Logs API
+  description: 'mDash is Cesanta''s managed IoT cloud platform for devices built with Mongoose OS.
+
+    It provides device management, over-the-air (OTA) firmware updates, a device
+
+    shadow/database, remote RPC, API key management, and notification logs.
+
+
+    This OpenAPI description was captured from Cesanta''s published REST API reference
+
+    (https://mongoose-os.com/docs/mdash/api.md). Every request must be authenticated
+
+    with an `Authorization: Bearer KEY` header; POST/PUT calls that carry a JSON body
+
+    must set `Content-Type: application/json`.
+
+    '
+  version: v2
+  contact:
+    name: Cesanta Support
+    email: support@cesanta.com
+    url: https://mdash.net/home/
+  license:
+    name: Cesanta Terms
+    url: https://mongoose-os.com/
+servers:
+- url: https://dash.mongoose-os.com/api/v2
+  description: mDash hosted production API
+security:
+- bearerAuth: []
+tags:
+- name: Logs
+  description: Notification logs
+paths:
+  /logs:
+    post:
+      operationId: getLogs
+      summary: Get stored notification logs
+      description: Retrieve stored notification logs starting from an offset.
+      tags:
+      - Logs
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                start:
+                  type: integer
+                  description: Offset to start from
+                  default: 0
+      responses:
+        '200':
+          description: Notification logs
+        '401':
+          description: Missing or invalid bearer token
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: mDash API key sent as an HTTP bearer token.
