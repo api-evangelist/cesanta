@@ -1,0 +1,19 @@
+generated: '2026-07-18'
+method: searched
+source: https://mongoose-os.com/docs/mdash/api.md
+versioning:
+  scheme: uri-path
+  current: v2
+  base_path: /api/v2
+  docs: https://mongoose-os.com/docs/mdash/api.md
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No formal deprecation or Sunset-header policy is published.
+sla:
+  url: null
+status_page: null
+notes: |
+  The mDash API is versioned in the URI path (/api/v2). Cesanta does not publish a
+  dedicated status page, SLA document, or deprecation policy for the hosted mDash service.
+deprecated_operations: []

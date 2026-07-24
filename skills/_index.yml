@@ -1,0 +1,7 @@
+generated: '2026-07-18'
+method: generated
+skills:
+  - file: cesanta-manage-devices.md
+    name: Manage mDash IoT devices
+    api: openapi/cesanta-mdash-openapi.yml
+    operations: [listDevices, registerDevice, updateDevice, callDeviceRpc, deviceOta, deleteDevice]

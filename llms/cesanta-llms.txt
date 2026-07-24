@@ -1,0 +1,34 @@
+# Cesanta
+
+> Cesanta develops embedded networking and IoT software. Its flagship is the Mongoose
+> embedded web server / networking library (HTTP, WebSocket, MQTT, TCP/IP) deployed in
+> 100M+ devices, alongside Mongoose OS (an IoT firmware framework) and mDash, a managed
+> IoT cloud platform offering device management, OTA updates, a device database, and a
+> REST API.
+
+## APIs
+
+- [mDash REST API v2](https://mongoose-os.com/docs/mdash/api.md): Device management, OTA, RPC, data, keys, and notification logs. Bearer-token auth. Base URL https://dash.mongoose-os.com/api/v2
+
+## Specs
+
+- [mDash OpenAPI](openapi/cesanta-mdash-openapi.yml): OpenAPI 3.0 captured from the published mDash REST API reference.
+
+## Docs
+
+- [mDash home](https://mdash.net/home/)
+- [mDash API reference](https://mongoose-os.com/docs/mdash/api.md)
+- [Mongoose OS documentation](https://mongoose-os.com/docs/)
+- [Mongoose library documentation](https://mongoose.ws/documentation/)
+- [mDash pricing](https://mdash.net/home/pricing.html)
+
+## Products
+
+- [Mongoose embedded library](https://mongoose.ws/): C/C++ embedded web server and networking library.
+- [Mongoose OS](https://mongoose-os.com/): IoT firmware development framework.
+- [mDash](https://mdash.net/home/): Managed IoT device cloud.
+- [VCON.io](https://vcon.io/): Remote firmware update and management module.
+
+## Repos
+
+- [Cesanta on GitHub](https://github.com/cesanta): 67 public repositories (mongoose, mongoose-os, mongoose-os-docs, and more).

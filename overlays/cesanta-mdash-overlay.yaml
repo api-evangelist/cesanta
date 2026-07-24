@@ -1,0 +1,18 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Cesanta mDash
+  version: 1.0.0
+extends: openapi/cesanta-mdash-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-provider: cesanta
+      x-apievangelist-product: mDash IoT Cloud
+      x-apievangelist-auth: bearer-api-key
+      x-apievangelist-notes: >-
+        Captured from Cesanta's published mDash REST API reference. Auth is a static
+        API key sent as an HTTP bearer token; keys are managed via the /keys endpoints.
+  - target: $.tags
+    update:
+      - name: Devices
+        description: Device registration, updates, RPC, and OTA firmware management.

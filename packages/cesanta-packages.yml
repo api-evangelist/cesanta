@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/cesanta
+notes: |
+  Cesanta's flagship libraries are C/C++ networking stacks distributed as source
+  (not published to language package registries). The mDash REST API itself has no
+  first-party client SDK on npm/PyPI/etc. (namesake packages "mos" on PyPI and
+  "mdash" on npm are unrelated third-party projects and are NOT included).
+packages:
+  - language: c
+    registry: github
+    name: mongoose
+    url: https://github.com/cesanta/mongoose
+    install: git clone https://github.com/cesanta/mongoose
+    official: true
+    description: Embedded web server / networking library (HTTP, WebSocket, MQTT, TCP/IP). Distributed as source.
+  - language: c
+    registry: github
+    name: mongoose-os
+    url: https://github.com/cesanta/mongoose-os
+    install: git clone https://github.com/cesanta/mongoose-os
+    official: true
+    description: IoT firmware development framework the mDash service manages.

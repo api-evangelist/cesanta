@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/cesanta-mdash-openapi.yml
+entities:
+  - name: Device
+    description: An IoT device registered with mDash, built on Mongoose OS.
+    id_field: id
+    fields: [id, name, shared_with, shadow]
+    operations: [listDevices, registerDevice, updateDevice, deleteDevice, callDeviceRpc, deviceOta, getDeviceData]
+  - name: DeviceData
+    description: Saved data (device shadow/database) associated with a device.
+    operations: [getDeviceData, getAllDevicesData]
+  - name: ApiKey
+    description: An mDash API key used as the Bearer token.
+    id_field: id
+    fields: [id, key]
+    operations: [listKeys, createKey, deleteKey]
+  - name: Log
+    description: Stored notification log entry.
+    operations: [getLogs]
+relationships:
+  - from: DeviceData
+    to: Device
+    kind: belongs_to
+    via: id
+    notes: Device data is addressed by device id (/devices/{id}/data).

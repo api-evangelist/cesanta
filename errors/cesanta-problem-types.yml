@@ -1,0 +1,14 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/cesanta-mdash-openapi.yml
+format: none
+notes: |
+  Cesanta's mDash REST API reference documents happy-path responses only and does
+  not publish a structured error catalog or an application/problem+json envelope.
+  The entries below are the authentication failure implied by the documented
+  Bearer-token requirement across every operation. No error codes were fabricated.
+problems:
+  - status: 401
+    title: Unauthorized
+    detail: Missing or invalid Authorization Bearer token.
+    applies_to: all operations

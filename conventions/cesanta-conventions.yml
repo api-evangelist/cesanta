@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: https://mongoose-os.com/docs/mdash/api.md
+api: openapi/cesanta-mdash-openapi.yml
+authentication:
+  style: bearer-token
+  header: Authorization
+  format: 'Bearer KEY'
+  notes: mDash API key issued from the dashboard; also managed via the /keys endpoints.
+  ref: authentication/cesanta-authentication.yml
+content_type:
+  request: application/json
+  notes: POST/PUT calls that carry a JSON body must set Content-Type application/json. OTA upload uses multipart/form-data (file=@fw.zip).
+versioning:
+  scheme: uri-path
+  current: v2
+  base_path: /api/v2
+  ref: lifecycle/cesanta-lifecycle.yml
+idempotency:
+  supported: false
+  notes: mDash does not document an idempotency-key mechanism. Device registration and key creation are not idempotent.
+pagination:
+  supported: false
+  notes: Log retrieval uses an offset via the POST /logs "start" parameter; device/key lists are returned whole.
+error_envelope:
+  documented: false
+  notes: The published reference documents happy-path responses only; no structured error envelope is specified.
+  ref: errors/cesanta-problem-types.yml
+rate_limiting:
+  documented: false
