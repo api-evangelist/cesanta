@@ -99,7 +99,7 @@ maintainers:
   email: info@apis.io
 common:
 - type: OpenAPI
-  url: openapi/cesanta-mdash-openapi.yml
+  url: openapi/_original/cesanta-mdash-openapi.yml
 - type: Authentication
   url: authentication/cesanta-authentication.yml
 - type: Conventions
