@@ -1,0 +1,146 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cesanta mDash REST Data Devices API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Devices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all registered devices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://dash.mongoose-os.com/api/v2/devices"
+          },
+          "docs": "Retrieve all devices registered to the authenticated account."
+        },
+        {
+          "info": {
+            "name": "Register a new device",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://dash.mongoose-os.com/api/v2/devices"
+          },
+          "docs": "Register a new device and receive its device credentials."
+        },
+        {
+          "info": {
+            "name": "Change device properties",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://dash.mongoose-os.com/api/v2/devices/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Device identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update one or more device properties. Any key is optional."
+        },
+        {
+          "info": {
+            "name": "Delete a device",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://dash.mongoose-os.com/api/v2/devices/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Device identifier"
+              }
+            ]
+          },
+          "docs": "Remove a device from the account."
+        },
+        {
+          "info": {
+            "name": "Call a device RPC function",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://dash.mongoose-os.com/api/v2/devices/:id/rpc/:func",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Device identifier"
+              },
+              {
+                "name": "func",
+                "value": "",
+                "type": "path",
+                "description": "RPC function name (e.g. GPIO.Toggle)"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Invoke an RPC function on the device. The request body is any valid JSON\nexpected by the target function (e.g. `{\"pin\": 2}` for `GPIO.Toggle`).\n"
+        },
+        {
+          "info": {
+            "name": "Perform a device OTA update",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://dash.mongoose-os.com/api/v2/devices/:id/ota",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Device identifier"
+              }
+            ],
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "file",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Upload a firmware .zip file to perform an over-the-air update."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,65 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cesanta mDash REST Data Keys API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Keys",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all API keys",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://dash.mongoose-os.com/api/v2/keys"
+          },
+          "docs": "List all API keys"
+        },
+        {
+          "info": {
+            "name": "Create an API key",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://dash.mongoose-os.com/api/v2/keys"
+          },
+          "docs": "Create an API key"
+        },
+        {
+          "info": {
+            "name": "Delete an API key",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://dash.mongoose-os.com/api/v2/keys/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "API key identifier"
+              }
+            ]
+          },
+          "docs": "Delete an API key"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

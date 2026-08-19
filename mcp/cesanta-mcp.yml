@@ -2,44 +2,51 @@ generated: '2026-07-18'
 method: derived
 status: candidate
 source: openapi/cesanta-mdash-openapi.yml
-notes: Cesanta publishes no official hosted MCP server. Candidate tool list derived one-per-operation from the mDash OpenAPI.
+notes: Cesanta publishes no official hosted MCP server. Candidate tool list derived one-per-operation
+  from the mDash OpenAPI.
 server:
   name: cesanta-mdash
   transport: http
 tools:
-  - name: list_devices
-    description: List all registered devices
-    source_operation: openapi/cesanta-mdash-openapi.yml#listDevices
-  - name: register_device
-    description: Register a new device
-    source_operation: openapi/cesanta-mdash-openapi.yml#registerDevice
-  - name: update_device
-    description: Change device properties
-    source_operation: openapi/cesanta-mdash-openapi.yml#updateDevice
-  - name: delete_device
-    description: Delete a device
-    source_operation: openapi/cesanta-mdash-openapi.yml#deleteDevice
-  - name: call_device_rpc
-    description: Call a device RPC function
-    source_operation: openapi/cesanta-mdash-openapi.yml#callDeviceRpc
-  - name: device_ota
-    description: Perform a device OTA firmware update
-    source_operation: openapi/cesanta-mdash-openapi.yml#deviceOta
-  - name: get_device_data
-    description: Get saved data for a device
-    source_operation: openapi/cesanta-mdash-openapi.yml#getDeviceData
-  - name: get_all_devices_data
-    description: Get data from all devices
-    source_operation: openapi/cesanta-mdash-openapi.yml#getAllDevicesData
-  - name: list_keys
-    description: List all API keys
-    source_operation: openapi/cesanta-mdash-openapi.yml#listKeys
-  - name: create_key
-    description: Create an API key
-    source_operation: openapi/cesanta-mdash-openapi.yml#createKey
-  - name: delete_key
-    description: Delete an API key
-    source_operation: openapi/cesanta-mdash-openapi.yml#deleteKey
-  - name: get_logs
-    description: Get stored notification logs
-    source_operation: openapi/cesanta-mdash-openapi.yml#getLogs
+- name: list_devices
+  description: List all registered devices
+  source_operation: openapi/cesanta-mdash-openapi.yml#listDevices
+- name: register_device
+  description: Register a new device
+  source_operation: openapi/cesanta-mdash-openapi.yml#registerDevice
+- name: update_device
+  description: Change device properties
+  source_operation: openapi/cesanta-mdash-openapi.yml#updateDevice
+- name: delete_device
+  description: Delete a device
+  source_operation: openapi/cesanta-mdash-openapi.yml#deleteDevice
+- name: call_device_rpc
+  description: Call a device RPC function
+  source_operation: openapi/cesanta-mdash-openapi.yml#callDeviceRpc
+- name: device_ota
+  description: Perform a device OTA firmware update
+  source_operation: openapi/cesanta-mdash-openapi.yml#deviceOta
+- name: get_device_data
+  description: Get saved data for a device
+  source_operation: openapi/cesanta-mdash-openapi.yml#getDeviceData
+- name: get_all_devices_data
+  description: Get data from all devices
+  source_operation: openapi/cesanta-mdash-openapi.yml#getAllDevicesData
+- name: list_keys
+  description: List all API keys
+  source_operation: openapi/cesanta-mdash-openapi.yml#listKeys
+- name: create_key
+  description: Create an API key
+  source_operation: openapi/cesanta-mdash-openapi.yml#createKey
+- name: delete_key
+  description: Delete an API key
+  source_operation: openapi/cesanta-mdash-openapi.yml#deleteKey
+- name: get_logs
+  description: Get stored notification logs
+  source_operation: openapi/cesanta-mdash-openapi.yml#getLogs
+deployment:
+  mode: none
+  verified: derived
+  tools: 12
+  checked: '2026-08-12'
+  source: catalog MCP census

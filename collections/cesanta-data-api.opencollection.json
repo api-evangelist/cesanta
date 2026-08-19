@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cesanta mDash REST Data API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Data",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get device saved data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://dash.mongoose-os.com/api/v2/devices/:id/data",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Device identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve the saved data for a single device."
+        },
+        {
+          "info": {
+            "name": "Get data from all devices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://dash.mongoose-os.com/api/v2/devices/data"
+          },
+          "docs": "Retrieve saved data across all devices on the account."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

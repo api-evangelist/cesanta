@@ -1,0 +1,179 @@
+{
+  "item": [
+    {
+      "id": "8b7dabe7-5bde-4bbb-9abf-3cec83a107c6",
+      "name": "Logs",
+      "description": {
+        "content": "Notification logs",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4f7763e5-6a82-42fe-97c0-0372239f9464",
+          "name": "Get stored notification logs",
+          "request": {
+            "name": "Get stored notification logs",
+            "description": {
+              "content": "Retrieve stored notification logs starting from an offset.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "logs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"start\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "000feec1-1f5d-43c6-a42e-275db46cad63",
+              "name": "Notification logs",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "logs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"start\": 0\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "265785f9-461d-4db5-9d2e-9f354e93481c",
+              "name": "Missing or invalid bearer token",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "logs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"start\": 0\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://dash.mongoose-os.com/api/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "c93d9220-019c-40c2-b242-ebd9c0e52ebb",
+    "name": "Cesanta mDash REST Data Logs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "mDash is Cesanta's managed IoT cloud platform for devices built with Mongoose OS.\nIt provides device management, over-the-air (OTA) firmware updates, a device\nshadow/database, remote RPC, API key management, and notification logs.\n\nThis OpenAPI description was captured from Cesanta's published REST API reference\n(https://mongoose-os.com/docs/mdash/api.md). Every request must be authenticated\nwith an `Authorization: Bearer KEY` header; POST/PUT calls that carry a JSON body\nmust set `Content-Type: application/json`.\n\n\nContact Support:\n Name: Cesanta Support\n Email: support@cesanta.com",
+      "type": "text/plain"
+    }
+  }
+}
