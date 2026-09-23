@@ -1,22 +1,7 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Cesanta mDash REST Data Keys API
-  description: 'mDash is Cesanta''s managed IoT cloud platform for devices built with Mongoose OS.
-
-    It provides device management, over-the-air (OTA) firmware updates, a device
-
-    shadow/database, remote RPC, API key management, and notification logs.
-
-
-    This OpenAPI description was captured from Cesanta''s published REST API reference
-
-    (https://mongoose-os.com/docs/mdash/api.md). Every request must be authenticated
-
-    with an `Authorization: Bearer KEY` header; POST/PUT calls that carry a JSON body
-
-    must set `Content-Type: application/json`.
-
-    '
+  title: Cesanta mDash REST Keys API
+  description: mDash is Cesanta's managed IoT cloud platform for devices built with Mongoose OS.
   version: v2
   contact:
     name: Cesanta Support
@@ -79,14 +64,6 @@ paths:
         '401':
           description: Missing or invalid bearer token
 components:
-  parameters:
-    KeyId:
-      name: id
-      in: path
-      required: true
-      description: API key identifier
-      schema:
-        type: string
   schemas:
     ApiKey:
       type: object
@@ -96,6 +73,14 @@ components:
           type: string
         key:
           type: string
+  parameters:
+    KeyId:
+      name: id
+      in: path
+      required: true
+      description: API key identifier
+      schema:
+        type: string
   securitySchemes:
     bearerAuth:
       type: http
