@@ -64,14 +64,6 @@ paths:
         '401':
           description: Missing or invalid bearer token
 components:
-  parameters:
-    KeyId:
-      name: id
-      in: path
-      required: true
-      description: API key identifier
-      schema:
-        type: string
   schemas:
     ApiKey:
       type: object
@@ -81,6 +73,14 @@ components:
           type: string
         key:
           type: string
+  parameters:
+    KeyId:
+      name: id
+      in: path
+      required: true
+      description: API key identifier
+      schema:
+        type: string
   securitySchemes:
     bearerAuth:
       type: http
