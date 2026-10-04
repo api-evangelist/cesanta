@@ -140,7 +140,27 @@ paths:
         '401':
           description: Missing or invalid bearer token
 components:
+  parameters:
+    DeviceId:
+      name: id
+      in: path
+      required: true
+      description: Device identifier
+      schema:
+        type: string
   schemas:
+    DeviceUpdate:
+      type: object
+      description: Mutable device properties. All keys optional.
+      properties:
+        name:
+          type: string
+        shared_with:
+          type: string
+          description: Comma-separated GitHub usernames
+        shadow:
+          type: object
+          additionalProperties: true
     Device:
       type: object
       description: An IoT device registered with mDash.
@@ -158,26 +178,6 @@ components:
           type: object
           description: Device shadow state
           additionalProperties: true
-    DeviceUpdate:
-      type: object
-      description: Mutable device properties. All keys optional.
-      properties:
-        name:
-          type: string
-        shared_with:
-          type: string
-          description: Comma-separated GitHub usernames
-        shadow:
-          type: object
-          additionalProperties: true
-  parameters:
-    DeviceId:
-      name: id
-      in: path
-      required: true
-      description: Device identifier
-      schema:
-        type: string
   securitySchemes:
     bearerAuth:
       type: http
