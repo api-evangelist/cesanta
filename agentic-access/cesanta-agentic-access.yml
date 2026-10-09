@@ -1,19 +1,40 @@
-generated: '2026-07-18'
+generated: '2026-09-23'
 method: generated
-source: openapi/cesanta-mdash-openapi.yml
+source: openapi/cesanta-data-api-openapi.yml, openapi/cesanta-devices-api-openapi.yml, openapi/cesanta-keys-api-openapi.yml,
+  openapi/cesanta-logs-api-openapi.yml
 description: Recommended x-agentic-access execution contracts, classified heuristically from
   the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
   audience per deployment. See research/curity/agentic-governance/.
 summary:
   operations: 12
   by_action_class:
-    connected: 4
-    acting: 8
+    connected: 5
+    acting: 7
   by_consequence:
-    read: 4
-    write: 8
+    read: 5
+    write: 7
   human_in_the_loop_required: 0
 operations:
+- path: /devices/{id}/data
+  method: get
+  operationId: getDeviceData
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /devices/data
+  method: get
+  operationId: getAllDevicesData
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
 - path: /devices
   method: get
   operationId: listDevices
@@ -104,26 +125,6 @@ operations:
       - abnormal
       - high-value
     audit: required
-- path: /devices/{id}/data
-  method: get
-  operationId: getDeviceData
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /devices/data
-  method: get
-  operationId: getAllDevicesData
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
 - path: /keys
   method: get
   operationId: listKeys
@@ -170,15 +171,9 @@ operations:
   method: post
   operationId: getLogs
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
