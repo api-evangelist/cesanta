@@ -64,6 +64,125 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Cesanta is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Cesanta is an embedded software and IoT company, established in 2013 to develop and support the Mongoose embedded web server and networking library (HTTP, WebSocket, MQTT, CoAP, TCP/IP) that ships in over 100 million devices from vendors such as Siemens, Bosch, Samsung, Schneider Electric, Broadcom, Google, and Caterpillar — and even runs aboard the International Space Station. Alongside the Mongoose library, Cesanta builds Mongoose OS (an IoT firmware development framework for ESP32, ESP8266, STM32 and other microcontrollers with AWS/Azure/Google Cloud integration), VCON.io (remote firmware update and automated firmware testing), and mDash — a managed IoT device cloud offering device management, over-the-air (OTA) updates, a device database/shadow, remote RPC, access control, and a documented REST API for programmatic fleet management.
 
-Backed by: 500-global — https://cesanta.com
+**Areas:** Company · IoT · Embedded · Device Management · Firmware · OTA · Networking · MQTT
+
+## Cesanta on APIs.io
+
+Everything profiled for Cesanta is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/cesanta/](https://apis.io/providers/cesanta/)** — or go straight to one of the APIs or properties below.
+
+### APIs (4)
+
+- [Cesanta Data API](https://apis.io/apis/cesanta/cesanta-data-api/) — Device data storage and retrieval
+- [Cesanta Devices API](https://apis.io/apis/cesanta/cesanta-devices-api/) — Device registration, updates, RPC, and OTA
+- [Cesanta Keys API](https://apis.io/apis/cesanta/cesanta-keys-api/) — API key management
+- [Cesanta Logs API](https://apis.io/apis/cesanta/cesanta-logs-api/) — Notification logs
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [cesanta-mdash](https://apis.io/servers/cesanta/cesanta-mdash/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Cesanta Agentic Access](https://apis.io/agentic-access/cesanta/cesanta-agentic-access/)
+
+#### Collections (4)
+
+Postman and Open Collection request collections.
+
+- [Cesanta mDash REST Data API](https://apis.io/collections/cesanta/open-cesanta-data-api/)
+- [Cesanta mDash REST Data Devices API](https://apis.io/collections/cesanta/open-cesanta-devices-api/)
+- [Cesanta mDash REST Data Keys API](https://apis.io/collections/cesanta/open-cesanta-keys-api/)
+- [Cesanta mDash REST Data Logs API](https://apis.io/collections/cesanta/open-cesanta-logs-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Cesanta Mdash Overlay](https://apis.io/overlays/cesanta/cesanta-mdash-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Cesanta Authentication](https://apis.io/security/cesanta/cesanta-authentication/)
+- [Cesanta Domain Security](https://apis.io/security/cesanta/cesanta-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://cesanta.com)
+- [Documentation](https://mongoose-os.com/docs/)
+- [Getting started](https://mdash.net/home/tech-guides.html)
+- [API reference](https://mongoose-os.com/docs/mdash/api.md)
+- [Pricing](https://mdash.net/home/pricing.html)
+- [Support](https://forum.mdash.net)
+- [Blog](https://cesanta.com/blog/)
+- [Terms of service](https://mongoose-os.com/terms.html)
+- [Privacy policy](https://cesanta.com/privacy.html)
+- [GitHub](https://github.com/cesanta)
+
+## API Evangelist rating
+
+**Kin Score 40.1** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 52.7 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 58.9 |
+| Access clarity | 32.9 |
+
+**Agent readiness 19.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/cesanta/](https://apis.io/providers/cesanta/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Cesanta: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/cesanta/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
